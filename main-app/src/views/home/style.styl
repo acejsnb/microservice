@@ -1,0 +1,19 @@
+.saas-home
+  width 100%
+  font-size 14px
+  > header
+    position relative
+    z-index 1
+    display flex
+    justify-content space-around
+    border-bottom 1px solid var(--grey-300)
+    box-shadow var(--box-shadow-bottom)
+    width @width
+    height 49px
+    line-height @height
+  > main
+    background-color var(--grey-100)
+    width @width
+    height calc(100vh - 49px)
+    div[id^="__qiankun"]
+      height 100%
