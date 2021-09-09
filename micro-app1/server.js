@@ -21,13 +21,13 @@ app.use(express.static('./production'));
 
 router.get('/', (req, res, next) => {
   // res.setHeader('Context-Type', 'text/html')
-  req.url = '/index.html';
+  req.url = 'index.html';
   // res.url = '/index.html';
   next();
 });
 
 // 启动成功打开网页
-const port = 3550; // 端口号
+const port = 3551; // 端口号
 app.listen(port, (err) => {
   if (err) {
     console.log(err);

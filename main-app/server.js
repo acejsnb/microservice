@@ -20,11 +20,12 @@ app.use(express.static('./microservice'));
 
 router.get('/', (req, res, next) => {
   // req.url = '/saasframe3';
+  // res.url = 'microservice/index.html';
   res.url = '/index.html';
   next();
 });
 // app.all('*', function (req, res, next) {
-//   req.url = 'index.html';
+//   req.url = '/index.html';
 //   next();
 // });
 

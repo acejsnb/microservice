@@ -36,14 +36,17 @@ interface ILItem {
 }
 // 微应用list
 const appList: ILItem[] = [
-    { name: 'app1', entry: '//192.168.1.6:2001' },
-    { name: 'vue3', entry: '//192.168.1.6:2002' }
+    // { name: 'app1', entry: '//192.168.1.6:2001' },
+    // { name: 'vue3', entry: '//192.168.1.6:2002' }
+    { name: 'app1', entry: '//172.16.1.90:3551' },
+    { name: 'vue3', entry: '//172.16.1.90:3552' }
 ];
 const microApps = appList?.map(({ name, entry }) => ({
     name,
     entry,
     container: '#microApp',
     activeRule: `${prefix}/${name}`,
+    // activeRule: `/${name}`,
     props: { prefix: `${prefix}/${name}`, entry }
 })) ?? [];
 

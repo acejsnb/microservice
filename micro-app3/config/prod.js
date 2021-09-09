@@ -9,16 +9,15 @@ const baseConfig = require('./base');
 
 const config = {
     entry: {
-        index: ['core-js/stable', 'regenerator-runtime/runtime', resolve(__dirname, '../src/main.js')] // 入口文件
-        // index: resolve(__dirname, '../src/main.js') // 入口文件
+        index: resolve(__dirname, '../src/main.js') // 入口文件
     },
     output: {
         path: resolve(__dirname, '../production'),
         filename: 'javascript/[name].[contenthash:6].js', // [name] 是entry的key
         publicPath: './',
+        assetModuleFilename: 'static/[name][ext]',
         library: `vue-${name}`,
-        libraryTarget: 'umd',
-        jsonpFunction: `webpackJsonp_${name}`
+        libraryTarget: 'umd'
     },
     plugins: [
         new HtmlWebpackPlugin({

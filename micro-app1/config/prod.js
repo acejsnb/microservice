@@ -12,8 +12,8 @@ const baseConfig = require('./base');
 
 const config = {
     entry: {
-        // index: ['core-js/stable', 'regenerator-runtime/runtime', '../src/main.js'] // 入口文件
-        index: resolve(__dirname, '../src/main.js') // 入口文件
+        index: ['core-js/stable', 'regenerator-runtime/runtime', resolve(__dirname, '../src/main.js')] // 入口文件
+        // index: resolve(__dirname, '../src/main.js') // 入口文件
     },
     output: {
         path: resolve(__dirname, '../production'),
